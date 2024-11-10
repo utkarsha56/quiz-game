@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #F6F4F0;
+    display: flex;
+    justify-content: center;
+}
+.contener{
+    width: 30rem;
+    position: relative;
+    top: 40px;
+    padding: 20px;
+}
+.quiz-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-logo img{
+    height: 8rem;
+    /* width: 10rem; */
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin-left: 30px;
+    filter: drop-shadow(4px 4px 4px  rgba(0, 0, 0, 0.8));
+}
+.result{
+    /* background-color: white; */
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.progress-bar{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.response{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+
+.restart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.restart .text{
+    background-color: #01AB08;
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 2px 2px 1px 1px #216e23;
+    font-size: 14px;
+    transition:  font-size 0.3s ease-out;
+    text-decoration: none;
+}
+.restart p{
+    font-family: sans-serif;
+    
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.restart .text:hover{
+    cursor: pointer;
+    font-size: 15px;
+    
+}
+.made-with{
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 2rem;
+    font-size: 10px;
+}
+
+/* --------------------------- progressbar is here ------------- */
+
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="progressbar"] {
+    --size: 10rem;
+    --fg: #35BD3A;
+    --bg: #FF7A7A;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, #F6F4F0 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: sans-serif;
+    font-size: 26px;
+    color: var(black);
+    font-weight: 600;
+  }
+  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quize</title>
+    <link rel="stylesheet" href="question10.css">
+    <script src="question10.js" defer></script>
+</head>
+<body>
+
+    <div class="contener">
+
+        <div class="icons">
+            <div class="quiz-icon"><img src="quize-logo.png"></div>
+            <div class="speaker-icon"><img src="speaker-icon.png" ></div>
+        </div>
+
+        <div class="count-contener"><div class="count-box">10/10</div></div>
+
+        <div class="question-box"><p> What is the ans of 13 &#10005 9 </p></div>
+
+        <div class="timer-contener"><div class="timer-box">00:15</div></div>
+
+        <div class="option-contener">
+            <p class="visited">You already answered this question</p>
+            <div class="option " id="1">124</div>
+            <div class="option " id="2">127</div>
+            <div class="option " id="3">107</div>
+            <div class="option " id="4">117</div>
+        </div>
+
+        <div class="next-contener">
+            <a  href="result.html">
+                <div class="next-box">next ></div>
+            </a>
+        </div>
+
+    </div>
+
+    <audio id="correct-audio" class="audio" src="correct-sound.mp3"></audio>
+
+    <audio id="wrong-audio" class="audio" src="error-sound.mp3"></audio>
+    
+    <audio id="bg-audio" class="audio" loop>
+        <source src="background-sound.mp3" type="audio/mp3">
+      </audio>
+
+    <div class="made-with">
+        <p>Made with ❤️ by Utkarsha Chakrabortty</p>
+    </div>
+    
+</body>
+</html>
