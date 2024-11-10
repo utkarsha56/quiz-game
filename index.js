@@ -5,26 +5,29 @@ const startbtn = document.querySelector('.start .text p')
 const nextbtn = document.querySelector('.start a')
 const pageno = Number(localStorage.getItem('pageno'))
 
-if(!localStorage.getItem('rememberme')){
-
-    localStorage.setItem('CurrentScore', '0')
-    localStorage.setItem('HighestScore', '0')
-    localStorage.setItem('isMuted', 'false')
-    localStorage.setItem('isplayed', 'false')
-    localStorage.setItem('pageno', '0')
-    localStorage.setItem('q1visited', 'false')
-    localStorage.setItem('q2visited', 'false')
-    localStorage.setItem('q3visited', 'false')
-    localStorage.setItem('q4visited', 'false')
-    localStorage.setItem('q5visited', 'false')
-    localStorage.setItem('q6visited', 'false')
-    localStorage.setItem('q7visited', 'false')
-    localStorage.setItem('q8visited', 'false')
-    localStorage.setItem('q9visited', 'false')
-    localStorage.setItem('q10visited', 'false')
-    localStorage.setItem('rememberme', 'true')
-
+function firststorage(){
+    if(!localStorage.getItem('rememberme')){
+        
+        localStorage.setItem('rememberme', 'true')
+        localStorage.setItem('CurrentScore', '0')
+        localStorage.setItem('HighestScore', '0')
+        localStorage.setItem('isMuted', 'false')
+        localStorage.setItem('isplayed', 'false')
+        localStorage.setItem('pageno', '0')
+        localStorage.setItem('q1visited', 'false')
+        localStorage.setItem('q2visited', 'false')
+        localStorage.setItem('q3visited', 'false')
+        localStorage.setItem('q4visited', 'false')
+        localStorage.setItem('q5visited', 'false')
+        localStorage.setItem('q6visited', 'false')
+        localStorage.setItem('q7visited', 'false')
+        localStorage.setItem('q8visited', 'false')
+        localStorage.setItem('q9visited', 'false')
+        localStorage.setItem('q10visited', 'false')
+    
+    }
 }
+firststorage()
 
 
 const heighestscore = Number(localStorage.getItem('HighestScore'))
@@ -51,6 +54,7 @@ deletebtn.addEventListener('click', function(){
     startbtn.innerHTML = `Start Now >>>`
     nextbtn.href = "question1.html"
     scorebord.innerHTML = 'New Player'
+    firststorage()
     setTimeout(() => {
         deletenotification.style.display = "none"
     }, 1000);
